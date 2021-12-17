@@ -26,11 +26,13 @@ feito com o template disponibilizado pelo DesignCourse
  <h1 align="center">
   <img alt="Readme" title="readmemobile" src="./readme_img/README-mobile.gif" />
  </h1>
- ## Tamanho médio
+ 
+ ## Médio
  <h1 align="center">
   <img alt="Readme" title="readmemobile" src="./readme_img/README-mid.gif" />
  </h1>
- ## Tamanhã grande
+ 
+ ## Grande
  <h1 align="center">
   <img alt="Readme" title="readmemobile" src="./readme_img/README-full.gif" />
  </h1>
