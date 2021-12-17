@@ -1,0 +1,459 @@
+//mobile first design
+
+//importa a fonte usada (google fonts)
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root{ //declaração da cor primaria, ao ser alterada, irá mudar todos os elementos que usam a color: var(--primary-color);
+    --primary-color: #02d3b7; //funciona como a declaração de uma variavel
+}
+
+body{
+    background: #f2f2f2;
+    margin: 0; //margin funciona fora do elemento
+    font-family: 'Poppins';
+}
+
+//barra de navegação
+
+.navbar{
+    background: white;
+    padding: 1em; //o padding funciona dentro do elemento
+
+    .logo{ //logo é um elemento child de navbar (SASS)
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        font-size: 1.2em; //em é uma unit relativa,  px, pt, são units absolutas
+
+        span{
+            color: var(--primary-color);
+        }
+    }
+
+    nav{
+        display: none; //esconde a nav que contem os elementos da nav bar
+    }
+    
+    .container{ //referencia a classe container 
+        display: flex; //referencia a flexbox
+        place-content: space-between;
+    }
+
+    .mobile-menu{ //referencia a classe mobile-menu
+        cursor: pointer;
+    }
+}
+
+a{ //referencia a todas tags a
+    color: #444444
+}
+
+ul{ //referencia a todas as ul(unordered lists)
+    list-style-type: none; //remove os circulos das ul
+    margin: 0;
+    padding: 0;
+}
+
+section{ //referencia a todas as sections
+    padding: 5em 2em; //(top/bottom) (esquerda/direita) adiciona um padding de 5em em volta de todas as sections
+
+}
+
+//primera section hero
+
+.hero{ //referencia a class hero
+    text-align: center; //alinha todos os elementos da classe no centro
+}
+
+.left-col{
+
+    .subhead{ //subtitulo (Its nitty and gritty)
+        text-transform: uppercase; //transforma o texto da classe em maiúsculo
+        font-weight: bold;
+        color: grey;
+        letter-spacing: 0.3em;
+    }
+
+    h1{
+        font-size: 2.5em;
+        line-height: 1.3em;
+        margin-top: 0.2em;
+    }
+
+    .primary-cta{
+        background: var(--primary-color);
+        color: white;
+        text-decoration: none; //remove a linha de baixo
+        padding: 0.8em 1.3em; //aumenta o contorno
+        font-size: 1.4em;
+        border-radius: 2em; //arredonda a borda
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .watch-video-cta{
+        display: block; //"quebra a linha" do bloco
+        margin-top: 1.5em;
+        text-decoration: none;
+
+        &:hover{
+            font-weight: bold;
+        }
+
+        img{ //imagem de camera
+            margin-right: 0.5em; //espaça a imagem do texto
+        }
+
+    }
+
+}
+
+.hero-img{ //referencia a classe hero-img
+    margin-top: 4em;
+    width: 70%;
+}
+
+//segunda section features
+
+.features-section{ //referencia a classe features-section
+    background: #20272E; //cor de fundo
+    color: white; //cor da fonte para branco
+
+    img{ //referencia a imagem na classe features section
+        display: none; //esconde a imagem
+    }
+
+}
+
+ul.features-list{ //referencia a classe features-list (posso colocar o ul antes para fins de localização no html)
+    margin: 0;
+    padding-left: 0.1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    //voltar depois
+
+    li{ //todas as li dentro da classe features-list
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        margin-left: 2em;
+        position: relative;
+
+        &:hover{
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        &::before{ //pesquisar sobre (serve para adicionar as checkmarks personalizadas)
+            content: '';
+            left: -2em;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('../images/bullet.svg');
+            background-size: contain;
+            margin-right: 0.5em;
+        }
+    }
+
+}
+
+//segunda section testimonials
+
+.testimonials-section{ //referencia a classe testimonials-section
+    background: var(--primary-color);
+    color: white;
+
+    ul{ //ul's filhas de testimonial-section
+
+        li{ //li's filhas das ul's anteriores
+
+            background: #01ad96;
+            text-align: center;
+            padding: 2em 1em; //(2em top/bottom, 1em (esquerda/direita)
+            width: 80%;
+            margin-top: 0;
+            margin-bottom: 5em;
+            margin-right: auto;
+            margin-left: auto;
+            border-radius: 2em;
+
+            img{ //imagem filha das li's anteriores
+                width: 5em;
+                height: 5em;
+
+                border: 10px solid #01ad96; //cria uma borda sólida de 10pixel da cor referenciada
+                border-radius: 50%; //transforma a borda em circular (raio de 50%)
+                margin-top: -4.5em; //desloca a imagem para cima 4.5 em
+            }
+
+        }
+
+    }
+}
+
+//ultima section contact
+
+h2{ //referencia ao h2 (seção de contato)
+    font-size: 2em;
+}
+
+label{
+    display: block; //quebra a linha de todas as labels
+    font-size: 1.2em;
+    //margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.send-message-cta{
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+
+    border: none;
+    border-radius: 5em;
+    display: inline-block;
+    margin-top: 0.5em;
+    margin-bottom: 4em;
+    width:unset;
+    padding: 0.8em;
+
+    cursor:pointer
+}
+
+input{
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0.3em;
+    border-radius: 0.3em;
+    border: 1px solid rgb(201, 201, 201);
+    box-sizing: border-box; //previne que a box se extenda demais para a direita
+}
+
+textarea{
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    margin-top: 0.3em;
+    border-radius: 0.3em;
+    border: 1px solid rgb(201, 201, 201);
+    box-sizing: border-box;
+}
+
+iframe{
+    width: 100%;
+    height: 300px;
+}
+
+//estilizando a nav bar 
+
+nav.menu-btn{
+    display: block;
+}
+
+nav{
+    position: fixed; //mantém a posição fixada ao scrollar
+    z-index: 999; //força os elementos da nav a se sobressair acima dos outros
+    width: 66%;
+    right: 0;
+    top: 0;
+    background: #20272E;
+    height: 100vh; //a altura será a altura total do dispositivo utilizado
+    padding: 1em;
+
+    ul.primary-nav{
+        margin-top: 5em;
+    }
+
+    li{
+        a{ //todos as tags a dentro das li's dentro da nav
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 0.5em;
+            font-size: 1.3em;
+            text-align: right;
+
+            &:hover{ //altera uma propriedade ao passar o mouse
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+.mobile-menu-exit{
+    float: right; //passa a imagem de X para a direita
+    margin: 0.5em;
+    //cursor: pointer;
+}
+
+//media query para responsividade desktop
+
+@media only screen and (min-width: 768px) { //as regras dessa media query se aplicarão quando o width da tela for maior que 768 pixels
+
+    .mobile-menu, .mobile-menu-exit {
+        display: none;
+    }
+    .navbar .container {
+        display: grid;
+        grid-template-columns: 180px auto;
+    }
+
+    .navbar nav {
+        display: flex;
+        justify-content: space-between;
+        background: none;
+        position: unset;
+        height: auto;
+        width: 100%;
+        padding: 0;
+
+        ul{
+            display: flex;
+        }
+
+        a{
+            color: black;
+            font-size: 1em;
+            padding: 0.1em 1em;
+        }
+
+        ul.primary-nav{
+            margin: 0;
+        }
+
+        li.current a {
+            font-weight: bold;
+        }
+
+        li.go-premium-cta a {
+            color: var(--primary-color);
+            border: 3px solid var(--primary-color);
+            font-weight: bold;
+            border-radius: 5em;
+            margin-top: -0.2em;
+
+            &:hover {
+                background: var(--primary-color);
+                color: white;
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1080px){
+    .container{ //centraliza os conteudos do container (o width fixo impede que ele aumente demais)
+        width: 1080px;
+        margin: 0 auto;
+    }
+
+    section{
+        padding: 10em 4em;
+    }
+
+    .hero .container{ 
+        display: flex;
+        justify-content: space-between; //faz com que as imagens e textos das divs container e hero fiquem lado a lado ao invés de uma em cima da outra
+        text-align: left;
+
+        .left-col{
+            margin: 3em 3em 0 5em; //ajusta a margem da coluna da esquerda na hero            
+        }
+    }
+
+    .hero-img{
+        width: 35%;
+        margin-right: 8em;
+    }
+
+    .hero-cta{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 4em;
+    }
+
+    ul.features-list{
+        display: block;
+        margin-left: 5em;
+
+        li{
+            font-size: 1.4em;
+
+
+        }
+    }
+
+    .features-section{
+        position: relative;
+
+        img{
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 350px;
+            bottom: -2em;
+        }
+    }
+
+    .testimonials-section{
+        ul{
+            display: flex;
+            li{
+                margin-top: 0;
+                margin-right: 1em;
+                margin-right: 1em;
+            }
+        }
+    }
+
+    .contact-section{
+        position: relative;
+
+        .container{
+            display: flex;
+        }
+
+    }
+
+    .contact-right{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+
+        iframe{
+            height: 100%;
+        }
+    }
+
+
+}
+
+@media only screen and (min-width: 1450px){
+    .features-section{
+        &:before{
+            content: '';
+            position: absolute;
+            width: 10%;
+            height: 20em;
+            background: var(--primary-color);
+            left: 0;
+            top: -4em;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 20em;
+            background: url(../images/dots.svg) no-repeat;
+            left: 4.5em;
+            top: 2em;
+        }
+    }
+}

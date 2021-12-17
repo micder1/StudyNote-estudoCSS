@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crash Course</title>
+        <link rel="stylesheet" href="css/main.css"> <!--ref ao css-->
+    </head>
+    <body>
+        <div class="navbar"> <!-- div da barra de navegação--> 
+            <div class="container"> <!--container com os elementos da barra de navegação-->
+                <a class="logo" href="index.html">
+                    Study <span>Note</span> 
+                </a>
+
+                <img onclick="clicarOpen()" id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="Open Navigation">
+
+                <nav> <!--nav que contém os elementos da nav bar-->
+                    <img onclick="clicarClose()" id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close Navigation">
+                    <ul class="primary-nav"> <!--lista com os elementos primarios-->
+                        <li class="current"><a href="#">Início</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Preços</a></li>
+                    </ul>
+                    <ul class="secondary-nav"> <!--lista com os elementos secundarios-->
+                        <li><a href="#">Contato</a></li>
+                        <li class="go-premium-cta"><a href="#">Experimente o premium</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <section class="hero"> <!--primeira section-->
+            <div class="container">
+                <div class="left-col">
+                    <p class="subhead">Feito por estudantes, para estudantes</p>
+                    <h1>O melhor aplicativo de notas do mundo!</h1>
+
+                    <div class="hero-cta">
+                        <a href="#" class="primary-cta">Teste grátis</a>
+                        <a href="#" class="watch-video-cta">
+                            <img src="images/watch.svg" alt="Watch a video">Showcase
+                        </a>
+                    </div>
+                </div>
+
+                <img src="images/illustration.svg" class="hero-img" alt="Illustration">
+            </div>
+
+        </section>
+
+        <section class="features-section"> <!--segunda section-->
+            <div class="container"> 
+                <ul class="features-list">
+                    <li>Sem limite de tarefas</li>
+                    <li>Experiência personalizada</li>
+                    <li>Lembretes por notificações</li>
+                    <li>Sem anúncios</li>
+                    <li>Totalmente grátis</li>
+                    <li>E muito mais</li>
+                </ul>
+                
+                <img src="images/holding-phone.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="testimonials-section"> <!--terceira section, depoimentos-->
+            <div class="container">
+                <ul> <!--ul que comporta as 3 li-->
+                    <li>
+                        <img src="images/person.jpg" alt=""> <!--imagem da pessoa-->
+
+                        <blockquote> <!--tag de referencia a uma citação-->
+                            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"
+                        </blockquote>
+                        <cite>- Joana</cite> <!--referencia a quem escreveu a citação-->
+                    </li>
+                    <li>
+                        <img src="images/person.jpg" alt=""> <!--imagem da pessoa-->
+
+                        <blockquote> <!--tag de referencia a uma citação-->
+                            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"
+                        </blockquote>
+                        <cite>- Joana</cite> <!--referencia a quem escreveu a citação-->
+                    </li>
+                    <li>
+                        <img src="images/person.jpg" alt=""> <!--imagem da pessoa-->
+
+                        <blockquote> <!--tag de referencia a uma citação-->
+                            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore"
+                        </blockquote>
+                        <cite>- Joana</cite> <!--referencia a quem escreveu a citação-->
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="contact-section"> <!--quarta section, contatos-->
+            <div class="container">
+                <div class="contact-left"> <!--parte esquerda-->
+                    <h2>Contato</h2>
+
+                    <form action=""> <!--formulario de contato-->
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Seu nome"> <!-- a id deve ser igual ao name da label-->
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Seu email">
+
+                        <label for="message">Mensagem</label>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="mensagem"></textarea>
+
+                        <input type="submit" class="send-message-cta" value="Enviar">
+                    </form>
+                </div>
+                <div class="contact-right"> <!--parte esquerda direita-->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95762.98702285593!2d-75.73214533367626!3d41.404636918882886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4d93a77484bbb%3A0xfff27920ab9bfae8!2sScranton%2C%20PA%2C%20USA!5e0!3m2!1sen!2sbr!4v1639593439551!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js">
+            
+        </script>
+    </body>
+</html>
