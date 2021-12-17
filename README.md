@@ -19,7 +19,7 @@ feito com o template disponibilizado pelo DesignCourse
  # Preview do projeto
  ## Responsividade
  <h1 align="center">
-  <img alt="Readme" title="readmemobile" src="./readme_img/README-resposive.gif" />
+  <img alt="Readme" title="readmeresponsivo" src="./readme_img/README-resposive.gif" />
  </h1>
  
  ## Mobile
@@ -29,10 +29,10 @@ feito com o template disponibilizado pelo DesignCourse
  
  ## Médio
  <h1 align="center">
-  <img alt="Readme" title="readmemobile" src="./readme_img/README-mid.gif" />
+  <img alt="Readme" title="readmemedio" src="./readme_img/README-mid.gif" />
  </h1>
  
  ## Grande
  <h1 align="center">
-  <img alt="Readme" title="readmemobile" src="./readme_img/README-full.gif" />
+  <img alt="Readme" title="readmefull" src="./readme_img/README-full.gif" />
  </h1>
